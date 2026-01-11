@@ -327,6 +327,120 @@ def generate_page(message=""):
     .toast.show {
       transform: translateX(0);
     }
+
+    /* --- Responsive Styling --- */
+    @media (max-width: 1024px) {
+      .hero-text h1 {
+        font-size: 4rem;
+      }
+
+      .content-block {
+        gap: 50px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 20px 30px;
+      }
+
+      .section {
+        padding: 60px 30px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 3.5rem;
+      }
+
+      .hero-text p {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .hero-illustration {
+        height: 350px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .content-block {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 80px;
+      }
+
+      .content-block,
+      .content-block[style*="direction: rtl"] {
+        direction: ltr !important;
+      }
+
+      .content-image {
+        height: 400px;
+      }
+
+      .content-text {
+        text-align: center;
+      }
+
+      .content-text h2 {
+        font-size: 2.5rem;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        padding: 60px 30px;
+      }
+
+      .toast {
+        top: auto;
+        bottom: 40px;
+        right: 20px;
+        left: 20px;
+        transform: translateY(200%);
+      }
+
+      .toast.show {
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-text h1 {
+        font-size: 2.8rem;
+      }
+
+      .alert-button {
+        width: 180px;
+        height: 180px;
+      }
+
+      .icon-svg {
+        width: 80px;
+        height: 80px;
+      }
+
+      @keyframes pulse-out {
+        0% {
+          transform: scale(0.8);
+          opacity: 0.8;
+        }
+
+        100% {
+          transform: scale(2.2);
+          opacity: 0;
+        }
+      }
+    }
   </style>
 </head>
 
